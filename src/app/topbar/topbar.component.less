@@ -1,0 +1,51 @@
+
+//Temp styling variables, will most likely move to global scope
+@topbarHeight: 55px;
+@topbarColor: #eee;
+
+:host {
+
+    z-index: 99;
+    position: fixed;
+    top: 0;
+
+    width: 100vw;
+    height: @topbarHeight;
+
+    header {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+
+        height: 100%;
+        padding: 0 20px;
+        background: @topbarColor;
+
+        .left-container {
+            #logo {
+
+                display: block;
+                position: relative;
+
+                font-family: 'Montserrat', sans-serif;
+                font-size: 22px;
+                font-weight: 600;
+
+                sub {
+
+                    vertical-align: baseline;
+
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .right-container {
+
+        }
+
+    }
+}
