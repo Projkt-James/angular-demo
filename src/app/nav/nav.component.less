@@ -1,5 +1,6 @@
+@import (less) '../../lessToolkit/_hamburger.less';
 
-//Temp styling variables, will most likely move to global scope
+// Temp styling variables, will most likely move to global styling scope
 @navbarBgColor: #1d1d1d;
 
 :host {
@@ -14,4 +15,23 @@
 
     overflow: hidden;
     background: @navbarBgColor;
+
+
+    div#hamburger {
+        @params: {
+            width: 26px;
+            height: 40px;
+            barHeight: 1px;
+            barSpacing: 0.6em;
+
+            background: none;
+            color: white;
+        };
+        #ui-elements#hamburger.create(@params);
+        margin: 20px 16px;
+    }
+}
+
+:host(.expanded) {
+    width: 200px;
 }

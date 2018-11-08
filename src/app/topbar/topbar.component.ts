@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as Models from '../../models/index';
+import { ILogo } from '../../models/index';
 
 @Component({
   selector: 'app-topbar',
@@ -9,10 +9,10 @@ import * as Models from '../../models/index';
 
 export class TopbarComponent implements OnInit {
 
-  logo: Models.ILogo = {
+  logo: ILogo = {
     title: "Simple",
     subTitle: "Beta",
-    imagePATH: ""
+    imagePath: ""
   }
 
   constructor() { }

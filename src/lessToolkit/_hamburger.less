@@ -1,0 +1,121 @@
+// Some namespaces for code organisation
+#ui-elements {
+    #hamburger {
+
+        // Base default params map incase none are provided
+        @defaultParams: {
+            width: 30px;
+            height: 26px;
+            barHeight: 2px;
+            barSpacing: 0.6rem;
+
+            background: none;
+            color: black;
+        };
+
+        /********************************
+         HAMBURGER MIXIN
+        ********************************/
+        .create(@params: none) {
+
+            cursor: pointer;
+
+            display: block;
+            position: relative;
+            margin: 0 auto;
+
+            span, span::before, span::after {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+
+                width: 100%;
+                
+            }
+
+            span {
+                top: 50%;
+                transition: background-color 0.2s ease 0s;
+
+                &::before, &::after {
+                    content: '';
+                    transition: top 0.2s 0.2s ease-out, transform 0.2s 0s ease-out;
+                }
+
+                &::before {
+                    top: -0.6rem;
+                }
+
+                &::after {
+                    top: 0.6rem;
+                }
+            }
+
+            & when(@params = none) {
+                
+                width: @defaultParams[width];
+                height: @defaultParams[height];
+
+                background: @defaultParams[background];
+
+                span, span::before, span::after {
+                    height: @defaultParams[barHeight];
+                    background: @defaultParams[color];
+                }
+
+                span::before {
+                    top: -@defaultParams[barSpacing];
+                }
+
+                span::after {
+                    top: @defaultParams[barSpacing];
+                }
+            }
+
+            & when not(@params = none) {
+
+                width: @params[width];
+                height: @params[height];
+
+                background: @params[background];
+
+                span, span::before, span::after {
+                    height: @params[barHeight];
+                    background: @params[color];
+                }
+
+                span::before {
+                    top: -@params[barSpacing];
+                }
+
+                span::after {
+                    top: @params[barSpacing];
+                }
+            }
+
+            // Active state styling
+            &.active {
+
+                span {
+                    background: none !important; //hide the middle bar to form cross
+                    
+                    &::before, &::after {
+                        top: 0px !important;
+                        transition: top 0.2s 0s ease-out, transform 0.2s 0.2s ease-out;
+                    }
+
+                    &::before {
+                        transform: rotate(45deg);
+                    }
+
+                    &::after {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+
+        }
+    }
+}
