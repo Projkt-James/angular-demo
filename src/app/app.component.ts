@@ -16,7 +16,7 @@ export class AppComponent {
 
     private navExpanded: boolean = false;
 
-    title: string = 'angular7-demo';
+    title: string = 'Simple Beta';
 
 
     navExpandEvent(expanded): void {

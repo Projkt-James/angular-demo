@@ -1,7 +1,11 @@
 <div id="hamburger" (click)="toggleNavigation($event)" [class.active]="expanded"><span></span></div>
 <nav>
     <ul>
-        <li><a routerLink="/signup">Sign Up</a></li>
-        <li><a routerLink="/thankyou">Thank You</a></li>
+        <li routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <span id="icon" style="background: url('../../assets/create.svg') center no-repeat;"></span><span id="text">Sign up</span>
+        </li>
+        <li routerLink="/confirm" routerLinkActive="active">
+            <span id="icon" style="background: url('../../assets/confirm.svg') center no-repeat;"></span><span id="text">Confirmation</span>
+        </li>
     </ul>
 </nav>
