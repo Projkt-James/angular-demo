@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-signup',
@@ -10,7 +11,7 @@ export class SignUpComponent implements OnInit {
     
     emailForm: FormGroup;
 
-    constructor(private formBuilder: FormBuilder) { }
+    constructor(private formBuilder: FormBuilder, private router: Router) { }
     ngOnInit(): void {
         this.emailForm = this.formBuilder.group({
             email: ['', [ Validators.required, Validators.email ]]
@@ -23,8 +24,11 @@ export class SignUpComponent implements OnInit {
 
     submitHandler(): void {
         const formValue = this.emailForm.value;
-        
-        console.log('Submitted');
+
+        //Conduct async backend post HERE
+
+        console.log(`Submitted email ${formValue.email}`);
+        this.router.navigate(['confirm'])
     }
 
 }
