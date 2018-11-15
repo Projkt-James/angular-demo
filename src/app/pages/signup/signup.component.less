@@ -5,11 +5,16 @@
     position: relative;
 
     height: 100%;
+    width: 100%;
 
     form {
         max-width: 400px;
         overflow: hidden;
         margin: auto;
+
+        @media only screen and (max-width: 600px) {
+            max-width: 250px;
+        }
 
         #email {
             &:focus {
