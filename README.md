@@ -2,7 +2,7 @@
 # Angular Demo - Mailing List Sign Up
 ![alt text][screenshot]
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4. It is a quick demo to of a mailing list sign up page with a hamburger nav to aid in navigating the two page components. 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4. It is a quick demo of a mailing list sign up page with a hamburger nav to aid in navigating the two page components. 
 
 ## Development server
 
