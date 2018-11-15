@@ -1,4 +1,6 @@
-# Angular7Demo
+[screenshot]: src\assets\screenshot.png "Project Screenshot"
+# Angular Demo Project - Mail List Sign Up
+![alt text][screenshot]
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 

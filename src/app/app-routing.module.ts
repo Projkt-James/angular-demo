@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SignUpComponent } from './pages/signup/signup.component';
-import { ThankYouComponent } from './pages/thankyou/thankyou.component';
+import { ConfirmComponent } from './pages/confirm/confirm.component';
 
 const routes: Routes = [
   { path: '', component: SignUpComponent},
   { path: 'signup', redirectTo: ''},
-  { path: 'confirm', component: ThankYouComponent }
+  { path: 'confirm', component: ConfirmComponent }
 ];
 
 @NgModule({

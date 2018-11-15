@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { SignUpComponent } from './pages/signup/signup.component';
-import { ThankYouComponent } from './pages/thankyou/thankyou.component';
+import { ConfirmComponent } from './pages/confirm/confirm.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,13 @@ import { ThankYouComponent } from './pages/thankyou/thankyou.component';
     NavComponent,
     TopbarComponent,
     SignUpComponent,
-    ThankYouComponent,
+    ConfirmComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
