@@ -1,4 +1,4 @@
-[screenshot]: src\assets\screenshot.png "Project Screenshot"
+[screenshot]: https://github.com/Projkt-James/angular-demo/blob/master/src/assets/screenshot.png?raw=true "Project Screenshot"
 # Angular Demo Project - Mail List Sign Up
 ![alt text][screenshot]
 
